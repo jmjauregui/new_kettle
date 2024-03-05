@@ -1,0 +1,16 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-4 offset-4 card mt-5">
+            
+            <ul class="list-group mt-5">
+                @defer {
+                    @for (item of arrayInstitutions; track item) {
+                    <li class="list-group-item" role="button" (click)="gotoInstitution(item)">{{ (item.institutions.name) }}</li>
+                    }
+                }
+            </ul>
+            <a href="/create-institution" class="btn btn-primary mt-5 mb-3">Nueva institución</a>
+        </div>
+    </div>
+</div>

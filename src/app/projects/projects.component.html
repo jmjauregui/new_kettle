@@ -1,0 +1,86 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 px-0">
+            <app-topmenu-institution></app-topmenu-institution>
+        </div>
+        <div class="col-2 px-0">
+            <app-sidemenu-institution [selectedMenu]="'projects'"></app-sidemenu-institution>
+        </div>
+        <div class="col-10 pt-4">
+
+            <div class="row">
+                <div class="col-12">
+                    <h3>Aqui podras visualizar todos tus projectos</h3>
+                </div>
+            </div>
+
+            <div class="row" *ngIf="projects.length == 0">
+                <div class="col-12 mt-5 pt-5 d-flex justify-content-center">
+                    <h1 class="text-silver">Aún no tienes proyectos creados o asociados a tu cuenta</h1>
+                </div>
+                <div class="row">
+                    <div class="col-4 offset-4 d-flex justify-content-center flex-column mt-5 card py-4">
+                        <label for="">Crea tu nuevo projecto aqui!!!</label>
+                        <input type="text" class="form-control mt-3" [(ngModel)]="nombreNuevoProjecto" placeholder="Nombre de tu nuevo projecto">
+                        <button class="btn btn-primary mt-3" (click)="createNewProject()">Crear nuevo projecto</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" *ngIf="projects.length > 0">
+                <div class="container-fluid">
+                    
+                    <div class="row">
+                        <div class="col-8 mt-5">
+                            <div class="row">
+                                @for (item of projects; track item) {
+                                    <div class="col-4 ">
+                                        <div class="col-12 card"  role="button" (click)="goToProject(item.project.$id)">
+                                            <div class="card-body">
+                                                <table class="table table-hover">
+                                                    <tr>
+                                                        <td><span>{{ item.project.name }}</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><span><b>Presupuesto:</b></span> <span>{{ item.project.presupuesto }}</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <b>Avance</b>
+                                                            <span>35%</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <b>HH destinadas</b>
+                                                            <span>50HH</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <b>HH cubiertas</b>
+                                                            <span>20HH</span>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="col-12 d-flex justify-content-center flex-column mt-5 card py-4 px-3">
+                                <label for="">Crea tu nuevo projecto aqui!!!</label>
+                                <input type="text" class="form-control mt-3" [(ngModel)]="nombreNuevoProjecto"
+                                    placeholder="Nombre de tu nuevo projecto">
+                                <button class="btn btn-primary mt-3" (click)="createNewProject()">Crear nuevo projecto</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="col-12 vh-100 sideBar">
+    
+    <div class="col-10 offset-1 pt-4">
+        <div class="card">
+            <div class="card-body d-flex align-items-center justify-content-center">
+                <h3>{{ institutionInformation.institutions.name }}</h3>
+            </div>
+        </div>
+        <div class="list-group list-group-flush mt-5">
+            <a href="/institution" class="list-group-item list-group-item-action my-2" [ngClass]="{ 'activeMenu': selectedMenu == 'dashboard' }">Dashboard</a>
+            <a href="#" class="list-group-item list-group-item-action my-2" [ngClass]="{ 'activeMenu': selectedMenu == 'tracking' }">Time trackig</a>
+            <a href="/projects" class="list-group-item list-group-item-action my-2" [ngClass]="{ 'activeMenu': selectedMenu == 'projects' }">My projects</a>
+            <a href="#" class="list-group-item list-group-item-action my-2" [ngClass]="{ 'activeMenu': selectedMenu == 'team' }">My team</a>
+            <a href="#" class="list-group-item list-group-item-action my-2" [ngClass]="{ 'activeMenu': selectedMenu == 'notes' }">My notes</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.sideBar{
+    background-color: #f8f9fa;
+}
+
+.list-group-flush>.list-group-item {
+    border-width: 0 0 var(--bs-list-group-border-width);
+    background-color: #f8f9fa;
+    border:none;
+}
+
+
+.activeMenu{
+    z-index: 2;
+    color: #359D9E !important;
+    background-color: #ECF6F7 !important;
+    border-left: 2px solid #359D9E!important;
+}

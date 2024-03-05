@@ -1,0 +1,10 @@
+<select class="form-select form-control-sm {{state}}" [(ngModel)]="state" (change)="changeStateTask()">
+    <option value="pendiente">Pendiente</option>
+    <option value="en_desarrollo">En Desarrollo</option>
+    <option value="sprint_review">Sprint Review</option>
+    <option value="completada">completada</option>
+    <option value="rechazada">Rechazada</option>
+    <option value="en_qa">En Proceso de QA</option>
+    <option value="pendiente_qa">Pendiente QA</option>
+    <option value="en live">En Producción</option>
+</select>
