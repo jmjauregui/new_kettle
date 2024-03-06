@@ -13,7 +13,10 @@ const listTables = [
     ['project', '65dad0f5518c0115b7d5'],
     ['user_has_project', '65dad5799b54df99777f'],
     ['project_tasks', '65dca3cdac1d7572f31b'],
+    ['project_categories', '65e793c74528f7e18b1d']
 ]
+
+
 const kettleDatabase = {
 
     databaseId: "kettle-database-v0.1-24112024", 

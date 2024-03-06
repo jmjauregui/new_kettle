@@ -5,6 +5,7 @@ import { TaskTableComponent } from '../componentes/task-table/task-table.compone
 import Utils from '../utils';
 import kettleDatabase from '../kettle.appwrite';
 import { CommonModule } from '@angular/common';
+import { FormAddCategoryProjectComponent } from '../componentes/form-add-category-project/form-add-category-project.component';
 
 
 
@@ -15,6 +16,7 @@ import { CommonModule } from '@angular/common';
     SidemenuInstitutionComponent,
     TopmenuInstitutionComponent,
     TaskTableComponent,
+    FormAddCategoryProjectComponent,
     CommonModule
   ],
   templateUrl: './projects-dashboard.component.html',

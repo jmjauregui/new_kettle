@@ -19,6 +19,4 @@ export const routes: Routes = [
         //rutas para manejar projectos
         { path: 'projects', component: ProjectsComponent },
         { path: 'projectsdetail', component: ProjectsDashboardComponent }
-    
-
 ];

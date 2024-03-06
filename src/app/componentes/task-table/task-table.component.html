@@ -25,13 +25,24 @@
                     </tr>
                 }
             </tbody>
+        </table>
+    </div>
+
+    <div class="col-12 mt-4">
+        <table class="table">
             <tfoot>
                 <tr>
-                    <td colspan="3">
+                    <td colspan="2">
+                        <select class="form-control" name="" id="">
+                            <option value="1">sdasd</option>
+                        </select>
+                    </td>
+                    <td>
                         <input type="text" class="form-control" [(ngModel)]="newtask.title" placeholder="titulo de la tarea">
                     </td>
                     <td>
-                        <input type="text" class="form-control" [(ngModel)]="newtask.description" placeholder="Descripcion de la tarea">
+                        <input type="text" class="form-control" [(ngModel)]="newtask.description"
+                            placeholder="Descripcion de la tarea">
                     </td>
                     <td>
                         <input type="number" class="form-control" [(ngModel)]="newtask.hh" placeholder="HH estimadas">
@@ -43,4 +54,5 @@
             </tfoot>
         </table>
     </div>
+
 </div>

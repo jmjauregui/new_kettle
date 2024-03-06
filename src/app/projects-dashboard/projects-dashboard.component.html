@@ -30,7 +30,13 @@
 
                 <div class="col-12" *ngIf="navigationSelected == 'task'">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 pt-5">
+                            <div class="row">
+                                <div class="col-12 d-flex justify-content-end">
+                                    <app-form-add-category-project [projectId]="idProyecto"></app-form-add-category-project>
+                                </div>
+                            </div>
+                            <hr>
                             <app-task-table [projectId]="idProyecto"></app-task-table>
                         </div>
                     </div>
